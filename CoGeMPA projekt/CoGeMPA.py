@@ -149,7 +149,7 @@ def plotter(data_dict, order, colors, num, maxn, filename, set_not_annotated, pi
 
         plt.yticks(weight='bold', rotation=90, verticalalignment='center', fontsize=18)
 
-        plt.tight_layout()
+        #plt.tight_layout()
         plt.gcf().subplots_adjust(top=0.975)
         plt.gcf().subplots_adjust(bottom=0.53)
         plt.gcf().subplots_adjust(left=0.03)
@@ -820,7 +820,7 @@ def auto_install_db(brite_type):
     with open('rawdb.txt', 'wb') as f:
         f.write(resp.content)
 
-    print("DB Installed")
+    print("DB Installed, pls check DB validity")
 
     KEGG_to_json('rawdb.txt', "keggdb.json")
     update_dbpath("./keggdb.json")
