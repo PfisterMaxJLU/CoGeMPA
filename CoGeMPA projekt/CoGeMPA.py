@@ -664,7 +664,7 @@ def xlsx_export(detail_list, order, xlsxname):
             elif pc == 2:
                 fraction = "Dispensable Genes"
             elif pc == 3:
-                fraction = "Not Ordered"
+                fraction = "Not Ordered into pan- dispensable- and core- genes"
 
             row += 2
             worksheet.write(row, 0, fraction, cell_format)
@@ -705,7 +705,7 @@ def onclick_xlsx_export(order, num, filename, gui_on, detail_list, KOFAM_file_pa
 
         worksheet.write(row, 0, filename, cell_format)
         row += 2
-        worksheet.write(row, 0, "Not Ordered", cell_format)
+        worksheet.write(row, 0, "Not Ordered into pan- dispensable- and core- genes", cell_format)
         row += 2
         worksheet.write(row, 0, order, cell_format)
         row += 2
